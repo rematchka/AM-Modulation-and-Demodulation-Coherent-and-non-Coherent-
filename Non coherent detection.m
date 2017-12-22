@@ -1,4 +1,4 @@
-[data ,fs]=audioread('wel.wav');
+[data ,fs]=audioread('audiofile.mp3');
 [dim , channel]=size(data);
  A = 2;
 len=length(data);
@@ -22,9 +22,8 @@ rt_signal_q=mt_signal(:,1)*sin(phi)+random_noise_1(:,1);
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-rt_signal_1=rt_signal_1(:,1)*2;
 rt_signal_1=rt_signal_1(:,1).^2;
-rt_signal_q=rt_signal_q(:,1)*2;
+%rt_signal_q=rt_signal_q(:,1)*2;
 rt_signal_q=rt_signal_q(:,1).^2;
 
 output=rt_signal_1(:,1)+rt_signal_q(:,1);
